@@ -1,1 +1,44 @@
+! name: Child Safety Blogs
+! description: Rerank results to boost content related to the Child Safety Blogs
+! public: true
+! author: Dumbo
+! avatar: #000000
 
+! Remove results not matching any other rule
+$discard
+
+! Generic boosting
+*blockchain*$boost=1,site=rs
+*blockchain*$boost,site=github.com
+*blockchain*$boost,site=stackoverflow.com
+
+! Boost some results
+$boost=3,site=https://www.safekids.org/
+$boost=3,site=https://www.parents.com/
+$boost=3,site=https://kidshealth.org/
+$boost=3,site=https://www.parenting.com/
+$boost=3,site=https://www.focusonthefamily.com/
+$boost=3,site=https://www.cdc.gov/safechild/
+$boost=3,site=https://www.healthychildren.org/English/Pages/default.aspx
+$boost=3,site=https://www.pta.org/
+$boost=3,site=http://www.connectsafely.org/
+$boost=3,site=http://www.childrensdefense.org/
+$boost=3,site=https://www.familyeducation.com/
+$boost=3,site=https://www.babycenter.com/
+$boost=3,site=https://www.boystown.org/
+$boost=3,site=https://www.childtrends.org/
+$boost=3,site=http://kidsindanger.org/
+$boost=3,site=https://onsafety.cpsc.gov/
+$boost=3,site=https://www.safety.com/
+$boost=3,site=http://www.safetyed.org/
+$boost=3,site=https://familyfocusblog.com/
+$boost=3,site=http://247moms.com/
+$boost=3,site=http://www.theparentreport.com/
+$boost=3,site=http://safetymom.com/
+$boost=3,site=http://www.healthworldeducation.org/
+$boost=3,site=https://www.mcafee.com/blogs/family-safety/how-to-teach-kids-about-online-safety-a-guide-2/
+$boost=3,site=https://safesearchengine.com/blogs/why-is-internet-safety-for-children-important
+$boost=3,site=https://www.psychologytoday.com/us/blog/captivating-crimes/202009/profiling-the-offending-pedophile
+$boost=3,site=https://www.whoisdap.com/
+$boost=3,site=https://www.antipredatorproject.org/
+$boost=3,site=https://www.savethechildren.org.uk/blogs/2020/fighting-to-protect-children-from-the-devastation-of-war
